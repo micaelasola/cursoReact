@@ -1,35 +1,19 @@
 import "./styles.css";
-import NavBar from "./components/NavBar.js";
+import NavBar from "./components/NavBar";
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer.js';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <NavBar />
-
+        <ItemListContainer greeting="Compra tus entradas aca"/>
         <p>
-          Mi primera app E-commerce en React.
+          App E-commerce en React.
         </p>
         <p style={{ border: "2px red solid" }}>
-          {" "}
-          What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
-          and typesetting industry. Lorem Ipsum has been the industry's standard
-          dummy text ever since the 1500s, when an unknown printer took a galley
-          of type and scrambled it to make a type specimen book. It has survived
-          not only five centuries, but also the leap into electronic
-          typesetting, remaining essentially unchanged. It was popularised in
-          the 1960s with the release of Letraset sheets containing Lorem Ipsum
-          passages, and more recently with desktop publishing software like
-          Aldus PageMaker including versions of Lorem Ipsum. Why do we use it?
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English. Many desktop publishing packages and web
-          page editors now use Lorem Ipsum as their default model text, and a
-          search for 'lorem ipsum' will uncover many web sites still in their
-          infancy. Various versions have evolved over the years, sometimes by
-          accident, sometimes on purpose (injected humour and the like).
+          
+          What is Lorem Ipsum? 
         </p>
         <a
           className="App-link"

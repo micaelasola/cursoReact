@@ -1,0 +1,23 @@
+
+.home{
+display: flex;
+justify-content: center;
+list-style: none;
+padding: 0;
+margin: 0;
+background: #333;
+}
+
+nav ul li{
+color: white;
+display: block;
+text-decoration: none;
+padding: .5em 1em;
+}
+
+@media screen and (min-width: 480px) {
+    nav ul {
+      display: flex;
+      justify-content: flex-end;
+    }
+}
