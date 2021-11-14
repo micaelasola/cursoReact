@@ -1,21 +1,32 @@
+import React from "react";
+import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
 import { CartWidget } from "../components/CartWidget/CartWidget";
-import { Container } from 'react-bootstrap'
-
 
 const NavBar = () => {
   return (
-    <Container>
-      
-        <ul className="home">
-          <li>AlAire</li>
-          <li>Bandas</li>
-          <li>Contacto</li>
-          <li></li>
-        </ul>
-        <CartWidget />
-    
-    </Container> 
-     );
+    <>
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Container>
+          <Navbar.Brand href="#home">Compra tus entradas</Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto">
+              <NavDropdown title="Categories" id="collasible-nav-dropdown">
+                <NavDropdown.Item href="#iphone">
+                  Inicio
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#mac">
+                  Contacto
+                </NavDropdown.Item>
+                
+              </NavDropdown>
+            </Nav>
+          </Navbar.Collapse>
+          <CartWidget />
+        </Container>
+      </Navbar>
+    </>
+  );
 };
 
 export default NavBar;

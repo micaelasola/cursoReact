@@ -1,16 +1,17 @@
-import React from 'react'
-import { Container } from 'react-bootstrap'
+import React from 'react';
+import { ProductCard } from '../ProductCard/ProductCard'; 
+import Img from "../../assets/img/banda1.png"; 
+
+import "./ItemListContainer.css"; 
 
 
 
-export const ItemListContainer = ( {greeting} ) => {
-
-
-
+export default function ItemListContainer ({greeting}) {
     return (
-        <Container className="my-5">
-            <h2>{greeting}</h2>
-            <hr/>
-        </Container>
+        <div className="global-css">
+            {greeting}
+            <ProductCard img={Img} name="Lollapalooza 2022" />
+            
+        </div>
     )
 }
