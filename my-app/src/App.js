@@ -9,7 +9,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <NavBar />
-        <ItemListContainer greeting="BIENVENIDOS" />
+        <h2>BIENVENIDOS</h2>
+        <ItemListContainer greeting="Compra tu entrada" />
        
         <Clicker />
        
