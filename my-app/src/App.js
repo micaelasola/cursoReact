@@ -1,7 +1,7 @@
 import "./styles.css";
 import NavBar from "./components/NavBar";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ItemListContainer  from "./components/ItemListContainer/ItemListContainer.js";
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import { Clicker } from "./components/Clicker/Clicker";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <header className="App-header">
         <NavBar />
         <h2>BIENVENIDOS</h2>
-        <ItemListContainer greeting="Compra tu entrada" />
+        <ItemListContainer />
        
         <Clicker />
        
