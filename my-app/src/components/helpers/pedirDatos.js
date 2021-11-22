@@ -1,10 +1,9 @@
-import {items} from '../Item/Item';
-
+import {stock} from '../data/stock';
 
 export const pedirDatos = () => {
         return new Promise((resolve, reject) =>{
             setTimeout(() =>{
-                resolve(items)
+                resolve(stock)
             }, 2500)
         })
     }

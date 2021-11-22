@@ -30,18 +30,18 @@ export const ItemListContainer = () => {
           loading 
           ? <h2 className="msg">Cargando...</h2> 
           : <div className="container">
-                {productos.map( (items) =>(
+                {productos.map( (stock) =>(
                     <div className="items">
-                        <img src={items.img}/>
-                        <h3>{items.name}</h3>
-                        <p>Precio: ${items.price}</p>
+                        <img src={stock.img}/>
+                        <h3>{stock.name}</h3>
+                        <p>Precio: ${stock.price}</p>
                     </div>
                 ))}
             </div>
       }
     </Container>
   );
-};
+}; 
 
 /*
 export default function ItemListContainer ({greeting}) {
