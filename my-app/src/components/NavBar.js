@@ -1,30 +1,28 @@
 import React from "react";
-import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
+import { Link } from 'react-router-dom';
+import { CartIcon } from '../components/CartIcon/CartIcon';
+import { FaTicketAlt } from 'react-icons/fa'
+import './NavBar/NavBar.css';
 
 const NavBar = () => {
+
+    
   return (
-    <>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand href="#home">Compra tus entradas</Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <NavDropdown title="Categories" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#iphone">
-                  Inicio
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#mac">
-                  Contacto
-                </NavDropdown.Item>
-                
-              </NavDropdown>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </>
-  );
-};
+  
+  <header className="header">
+      <Link to="/"> <FaTicketAlt className="ticket"/></Link>
+
+      <nav>
+          <ul>
+              <li><Link to="/">Inicio</Link></li>
+              <li><Link to="/cart">Carrito</Link></li>
+          </ul>
+      </nav>
+      
+      <Link to="cart"> <CartIcon/> </Link>
+      
+  </header>
+  )
+}
 
 export default NavBar;
