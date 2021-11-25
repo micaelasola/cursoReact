@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./ItemListContainer.css";
 import { pedirDatos } from "../helpers/pedirDatos";
-import { Container } from "react-bootstrap";
+import ItemList from "../ItemList/ItemList";
+
 
 export const ItemListContainer = () => {
 
@@ -23,36 +24,13 @@ export const ItemListContainer = () => {
       });
   }, []);
 
-  return (
-    <Container className="my-5">
-      
-      {
-          loading 
-          ? <h2 className="msg">Cargando...</h2> 
-          : <div className="container">
-                {productos.map( (stock) =>(
-                    <div className="items">
-                        <img src={stock.img}/>
-                        <h3>{stock.name}</h3>
-                        <p>Precio: ${stock.price}</p>
-                    </div>
-                ))}
-            </div>
-      }
-    </Container>
-  );
-}; 
-
-/*
-export default function ItemListContainer ({greeting}) {
     return (
-        <div className="global-css">
-           
-            
-          
-            <ProductCard img={Img} name="Lollapalooza 2022" />
-            {greeting}
-            
-        </div>
-    )
-}*/
+      <>
+          {
+              loading 
+                  ? <h2>Cargando...</h2> 
+                  : <ItemList items={productos} />
+          }
+      </>
+  )
+}
